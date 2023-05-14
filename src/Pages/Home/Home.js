@@ -28,7 +28,7 @@ const Home = () => {
   // Function to load questions
   async function loadQuestions() {
     const response = await axios.get(
-      "/api/question/getquestions",
+      `${process.env.REACT_APP_base_url}/api/question/getquestions`,
       userData.config
     );
     setQuestions(response.data?.data);

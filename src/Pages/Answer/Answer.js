@@ -28,7 +28,7 @@ function Answer() {
     try {
       // The following lines send a post request to the server to add a new answer
       const postRes = await axios.post(
-        "/api/answer/newanswer",
+        `${process.env.REACT_APP_base_url}/api/answer/newanswer`,
         {
           answer: form.new_answer,
           question_id: id,

@@ -17,7 +17,7 @@ const NewQuestion = () => {
     try {
       //sending user data to database to be logged in
       await axios.post(
-        "/api/question/newquestion",
+        `${process.env.REACT_APP_base_url}/api/question/newquestion`,
         {
           title: form.title,
           question: form.question,

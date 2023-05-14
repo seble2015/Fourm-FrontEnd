@@ -16,7 +16,7 @@ function Login({ showSignUp, showForgot }) {
     e.preventDefault();
     try {
       //sending user data to database to be logged in
-      const loginRes = await axios.post("/api/users/login", {
+      const loginRes = await axios.post(`${process.env.REACT_APP_base_url}/api/users/login`, {
         email: form.email,
         password: form.password,
       });
